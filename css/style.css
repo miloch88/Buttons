@@ -1,0 +1,151 @@
+body {
+    text-align: center;
+}
+
+.button1 {
+    position: relative;
+    display: block;
+    padding: 10px 25px;
+    margin: 100px auto;
+    font-size: 40px;
+    border-style: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.button1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: 1s cubic-bezier(0.43, 2.63, 1, 1);
+}
+
+.button1:hover::before {
+    right: 0;
+}
+
+/* button:hover span{
+    left: 10%;
+} */
+
+/* span{
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: black;
+    bottom: 0;
+    left: -100%;
+    transition: .4s;
+} */
+
+.button2 {
+    position: relative;
+    display: block;
+    padding: 10px 25px;
+    font-size: 40px;
+    margin: 100px auto;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+    overflow: hidden;
+    transition: .25s .05s;
+}
+
+.button2:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.button2:hover::before{
+    height: 100%;
+}
+
+.button2:hover{
+    color: white;
+}
+
+.button3{
+    position: relative;
+    display: block;
+    margin: 100px auto;
+    font-size: 40px;
+    padding: 10px 30px;
+    background-color: white;
+    border: 3px solid black;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button3::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    transition: right 1s linear, height 1s 1s linear, bottom 1s 1s linear;
+}
+
+.button3:hover::before{
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.button4{
+    display: block;
+    margin: 100px auto;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 10px 30px;
+    background-color: white;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.button4::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -33px;
+    border-left: 30px solid red;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparentF;
+    transition: .5s;
+}
+
+.button4:hover::before{
+    left: 0;
+}
+
+.button4::after{
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    transform: translateY(-50%) scale(0);
+    transition: .5s;
+}
+
+.button4:hover::after{
+    transform: translateY(-50%) scale(1);
+}
