@@ -125,7 +125,7 @@ body {
     left: -33px;
     border-left: 30px solid red;
     border-top: 35px solid transparent;
-    border-bottom: 35px solid transparentF;
+    border-bottom: 35px solid transparent;
     transition: .5s;
 }
 
